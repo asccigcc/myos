@@ -1,7 +1,8 @@
+#include "uart.h"
+
 void kmain(void)
 {
-  volatile char *uart = (volatile char *)0x10000000;
-  *uart = 'B';
+  uart_puts("Hello from my kernel!\n");
 
   while (1) {
   }
